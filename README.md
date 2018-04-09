@@ -6,7 +6,7 @@ Navigate through the complete documentation here: https://github.com/idwall/idwa
 
 ### What does IDwall do?
 
-IDwall exists to securely streamline and automate your *onboarding process* for new users, customers or partners via* Background Check*.
+IDwall exists to securely streamline and automate your *onboarding process* for new users, customers or partners via *Background Check*.
 
 Our system queries a variety of public and private sources, bringing you information as custom reports that can help you approve and enroll more people on your platform. This entire process is automatic, and can be done through our [Dashboard] (https://dashboard.idwall.co) or our API.
 
