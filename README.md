@@ -1,30 +1,30 @@
-# Introdução
+# Intro
 
-*Esta documentação reúne informações da API oficial da IDwall.* 
+*This documentation gathers IDwall's official API information.*
 
-Navegue pela documentação completa aqui: https://github.com/idwall/idwall-api/wiki
+Navigate through the complete documentation here: https://github.com/idwall/idwall-api/wiki
 
-### O que a IDwall faz?
+### What does IDwall do?
 
-A IDwall existe para agilizar e automatizar seu processo de *onboarding* de novos usuários, clientes ou parceiros, de maneira segura através de *Background Check*.
+IDwall exists to securely streamline and automate your *onboarding process* for new users, customers or partners via* Background Check*.
 
-Nosso sistema faz consultas em diversas fontes públicas e privadas, trazendo informações em forma de relatórios personalizados que podem te ajudar a aprovar e cadastrar mais pessoas na sua plataforma. Todo este processo é automático, e pode ser feito através do nosso [Dashboard](https://dashboard.idwall.co) ou da nossa API.
+Our system queries a variety of public and private sources, bringing you information as custom reports that can help you approve and enroll more people on your platform. This entire process is automatic, and can be done through our [Dashboard] (https://dashboard.idwall.co) or our API.
 
-### Como utilizar esta documentação
-<!--Para implementação da API em seu sitema, selecione na coluna ao lado a linguagem de programação que gostaria de usar para fazer requisições aos endpoints. Códigos de exemplo serão gerados ao lado de cada endpoint para auxiliá-lo na implementação.-->
+### How to Use This Documentation
 
-Enquanto estiver seguindo esta documentação, recomendamos que utilize o [Postman](https://www.getpostman.com/). Nele você irá importar a *Collection* da IDwall usando o menu *Import > Import from Link >* https://api-v2.idwall.co/postman.
-O artigo [Importar a documentação da API v2 através do Postman](https://intercom.help/idwall/api/testes-da-api/importar-a-documentacao-da-api-v2-atraves-do-postman) explica o processo de importação passo a passo.
+While following this documentation, we recommend that you use [Postman] (https://www.getpostman.com/). In it you will import the *Collection* from IDwall using the *Import > Import from Link* menu* https://api-v2.idwall.co/postman.
+The article [Import API documentation v2 through Postman] (https://intercom.help/idwall/api/testes-da-api/importar-add-up-api-v2-traves-of-postman) explains the step-by-step process.
 
-### Uso da API
+### API usage
 
-Utilizamos uma [API REST](https://pt.wikipedia.org/wiki/REST). Seguimos um padrão comum entre todos os *endpoints* para maior previsibilidade: 
-- Todos as requisições executadas com sucesso retornam o ```HTTP Status 200```.
-- Requisões com falha retornarão o número de status pertinente ao erro, além de chaves com informações extras sobre este erro.
-- Utilizamos [parâmetros de query](https://en.wikipedia.org/wiki/Query_string) como auxílio para paginação, filtros e informações adicionais que podem ser solicitadas na consulta.
-- Todas as requisições retornam conteúdos JSON (application/json) e possuem corpos padrões:
+We use a [REST API] (https://pt.wikipedia.org/wiki/REST). We follow a common pattern among all *endpoints* for greater predictability:
+- All requests executed successfully return ```HTTP Status 200```.
+- Failed requests will return the status number relevant to the error, as well as keys with extra information about this error.
+- We use [query parameters] (https://en.wikipedia.org/wiki/Query_string) as aid for pagination, filters and additional information that can be requested in the query.
+- All requests return JSON (application/json) content and have standard bodies:
 
-### Requisições de sucesso
+
+### Success requests
 
 ```json
 {
@@ -33,7 +33,7 @@ Utilizamos uma [API REST](https://pt.wikipedia.org/wiki/REST). Seguimos um padr�
 }
 ```
 
-### Requisições falhas
+### Failed requests
 
 ```json
 {
@@ -43,18 +43,20 @@ Utilizamos uma [API REST](https://pt.wikipedia.org/wiki/REST). Seguimos um padr�
 }
 ```
 
-Cada endpoint possui um *schema* diferente para o campo `result`, que poderá ser consultado
-conforme necessidade no decorrer desta documentação.
+Each endpoint has a different *schema* for the `result` field, which can be queried
+as required in the course of this documentation.
 
-Nosso *endpoint* base para a implementação é:
+Our *endpoint* basis for implementation is:
+
 
 ```
 https://api-v2.idwall.co
 ```
 
-Os *endpoints* mostrados ao longo da documentação devem ser utilizados ao final do *endpoint* base. Por exemplo, o *endpoint* ```/validacoes``` é acessado através da URL ```https://api-v2.idwall.co/validacoes```
+The *endpoints* shown throughout the documentation should be used at the end of the *endpoint* base. For example, the *endpoint* ```/validations``` is accessed through the URL ```https://api-v2.idwall.co/validations```
 
-O ```header``` de todas as requisições deve conter a chave:
+
+The ```header``` of all requests must contain the key:
 
 ```json
 {
@@ -62,4 +64,4 @@ O ```header``` de todas as requisições deve conter a chave:
 }
 ```
 
-onde ```{token}``` é a chave de acesso do seu usuário. Sua chave de acesso pode ser encontrada acessando nosso Dashboard, em [https://dashboard.idwall.co/conta](https://dashboard.idwall.co/conta).
+where ```{token}``` is your user's access key. Your access key can be found by visiting our Dashboard at [https://dashboard.idwall.co/conta](https://dashboard.idwall.co/conta).
