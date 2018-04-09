@@ -53,7 +53,7 @@ Our *endpoint* basis for implementation is:
 https://api-v2.idwall.co
 ```
 
-The *endpoints* shown throughout the documentation should be used at the end of the *endpoint* base. For example, the *endpoint* ```/validations``` is accessed through the URL ```https://api-v2.idwall.co/validations```
+The *endpoints* shown throughout the documentation should be used at the end of the *endpoint* base. For example, the *endpoint* ```/validacoes``` is accessed through the URL ```https://api-v2.idwall.co/validacoes```
 
 
 The ```header``` of all requests must contain the key:
